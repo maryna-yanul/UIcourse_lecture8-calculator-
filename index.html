@@ -8,31 +8,102 @@
 <body>
 <h1>Calculator</h1>
 <div class="allCal">
-	<div class="block blockNumber">C</div>
+	<div class="block orange">C</div>
+  <div class="block orange" onclick="divisionFunction()">/</div>
 	<div class="value">0</div>
 </div>
 <div class="allCal">
-  <div class="block blockNumber">7</div>
-  <div class="block blockNumber">8</div>
-  <div class="block blockNumber">9</div>
-  <div class="block orange">*</div>
+  <div class="block blockNumber" onclick="number7Function()">7</div>
+  <div class="block blockNumber" onclick="number8Function()">8</div>
+  <div class="block blockNumber" onclick="number9Function()">9</div>
+  <div class="block orange" onclick="multiplicationFunction()">*</div>
  </div>
  <div class="allCal">
-  <div class="block blockNumber">4</div>
-  <div class="block blockNumber">5</div>
-  <div class="block blockNumber">6</div>
-  <div class="block orange">-</div>
+  <div class="block blockNumber" onclick="number4Function()">4</div>
+  <div class="block blockNumber" onclick="number5Function()">5</div>
+  <div class="block blockNumber" onclick="number6Function()">6</div>
+  <div class="block orange" onclick="minusFunction()">-</div>
  </div>
  <div class="allCal">
-  <div class="block blockNumber">1</div>
-  <div class="block blockNumber">2</div>
-  <div class="block blockNumber">3</div>
-  <div class="block orange">+</div>
+  <div class="block blockNumber" onclick="number1Function()">1</div>
+  <div class="block blockNumber" onclick="number2Function()">2</div>
+  <div class="block blockNumber" onclick="number3Function()">3</div>
+  <div class="block orange" onclick="plusFunction()">+</div>
  </div>
  <div class="allCal">
-  <div class="block-zero block">0</div>
-  <div class="block blockNumber">,</div>
-  <div class="block orange">=</div>
+  <div class="block-zero block" onclick="number0Function()">0</div>
+  <div class="block blockNumber" onclick="commaFunction()">,</div>
+  <div class="block orange" onclick="equalFunction()">=</div>
  </div>
+ <script type="text/javascript">
+    var number7Function = function(number){
+      number = 7;
+      return number;
+    }
+    var number8Function = function(number){
+      number = 8;
+      return number;
+    }
+    var number9Function = function(number){
+      number = 9;
+      return number;
+    }
+    var number4Function = function(number){
+      number = 4;
+      return number;
+    }
+    var number5Function = function(number){
+      number = 5;
+      return number;
+    }
+    var number6Function = function(number){
+      number = 6;
+      return number;
+    }
+    var number1Function = function(number){
+      number = 1;
+      return number;
+    }
+    var number2Function = function(number){
+      number = 2;
+      return number;
+    }
+    var number3Function = function(number){
+      number = 3;
+      return number;
+    }
+    var number0Function = function(number){
+      number = 0;
+      return number;
+    }
+    var multiplicationFunction= function(action){
+      action = '*';
+      return action;
+    }
+    var divisionFunction= function(action){
+      action = '/';
+      return action;
+    }
+    var minusFunction= function(action){
+      action = '-';
+      return action;
+    }
+    var plusFunction= function(action){
+      action = '+';
+      return action;
+    }
+    var commaFunction= function(action){
+      action = '.';
+      return action;
+    }
+    var commaFunction= function(action){
+      action = '.';
+      return action;
+    }
+    var equalFunction= function(action){
+      action = '=';
+      return action;
+    }
+ </script>
 </body>
 </html>
