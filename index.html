@@ -36,12 +36,15 @@
   <div class="block orange" onclick="equalFunction()">=</div>
  </div>
  <script type="text/javascript">
-    var csl = function(){
-      document.getElementById('windCal').value;
-}
+    var field = document.getElementById("windCal")
+    field.value = "1 + 2 ";
+    field.value.split(" ");
+    eval(field.value);
+
+    
     var number7Function = function(number){
       number = 7;
-      csl(number);
+      csl.value(number);
     }
     var number8Function = function(number){
       number = 8;
