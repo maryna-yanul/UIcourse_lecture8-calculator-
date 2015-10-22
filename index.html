@@ -10,7 +10,7 @@
 <div class="allCal">
 	<div class="block orange">C</div>
   <div class="block orange" onclick="divisionFunction()">/</div>
-	<div class="value">0</div>
+	<div class="value Cal"><input id="windCal" type="text" value=""></div>
 </div>
 <div class="allCal">
   <div class="block blockNumber" onclick="number7Function()">7</div>
@@ -36,9 +36,12 @@
   <div class="block orange" onclick="equalFunction()">=</div>
  </div>
  <script type="text/javascript">
+    var csl = function(){
+      document.getElementById('windCal').value;
+}
     var number7Function = function(number){
       number = 7;
-      return number;
+      csl(number);
     }
     var number8Function = function(number){
       number = 8;
@@ -104,6 +107,12 @@
       action = '=';
       return action;
     }
+    function Calculator(a, operation, b){
+      var a=[];
+      var b=[];
+      var operation = 9;
+          }
+    
  </script>
 </body>
 </html>

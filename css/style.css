@@ -1,6 +1,8 @@
 .allCal{
 	color: #fff;
 	width: 500px;
+        font: bold 14px Arial, sans-serif;
+                
 }
 .block{
     height: 40px;
@@ -10,6 +12,7 @@
     border: 1px solid white;
     border-radius: 5px 5px 5px 5px;
     cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 .blockNumber{
     width: 120px;
@@ -24,15 +27,21 @@
 	background-color: #FFA700;
 }
 .value{
-	background-color: #ffa700;
 	width: 246px;
-    height: 40px;
+    height: 57px;
     display: inline-block;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 3px;
     border: 1px solid white;
     border-radius: 5px 5px 5px 5px;
+    box-shadow: inset 0px 4px #ffa700;
+    background-color: rgb(255, 198, 88);
 }
 .block:hover{
 	background-color: #464646;
-};
+}
+.value input {
+    height: 38px;
+    width: 232px;
+    font-size: 20px;
+}
