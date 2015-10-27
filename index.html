@@ -8,12 +8,12 @@
 <body>
 <h1>Calculator</h1>
 <div class="allCal">
-	<div class="block orange">C</div>
+	<div class="block orange" onclick="cancelCal()">C</div>
   <div class="block orange" onclick="divisionFunction()">/</div>
 	<div class="value Cal"><input id="windCal" type="text" value=""></div>
 </div>
 <div class="allCal">
-  <div class="block blockNumber" onclick="number7Function()">7</div>
+  <div class="block blockNumber" id="typeCal" onclick="number7Function()">7</div>
   <div class="block blockNumber" onclick="number8Function()">8</div>
   <div class="block blockNumber" onclick="number9Function()">9</div>
   <div class="block orange" onclick="multiplicationFunction()">*</div>
@@ -36,86 +36,88 @@
   <div class="block orange" onclick="equalFunction()">=</div>
  </div>
  <script type="text/javascript">
-    var field = document.getElementById("windCal")
-    field.value = "1 + 2 ";
-    field.value.split(" ");
-    eval(field.value);
+    //field.value.split(" ");
+    //console.log(eval(field.value));
 
-    
+    function writeToInput(char){
+      var field = document.getElementById("windCal");
+      field.value = field.value + char;
+    }
+
     var number7Function = function(number){
       number = 7;
-      csl.value(number);
+      return writeToInput(number);
     }
     var number8Function = function(number){
       number = 8;
-      return number;
+      return writeToInput(number);
     }
     var number9Function = function(number){
       number = 9;
-      return number;
+      return writeToInput(number);
     }
     var number4Function = function(number){
       number = 4;
-      return number;
+      return writeToInput(number);
     }
     var number5Function = function(number){
       number = 5;
-      return number;
+      return writeToInput(number);
     }
     var number6Function = function(number){
       number = 6;
-      return number;
+      return writeToInput(number);
     }
     var number1Function = function(number){
       number = 1;
-      return number;
+      return writeToInput(number);
     }
     var number2Function = function(number){
       number = 2;
-      return number;
+      return writeToInput(number);
     }
     var number3Function = function(number){
       number = 3;
-      return number;
+      return writeToInput(number);
     }
     var number0Function = function(number){
       number = 0;
-      return number;
+      return writeToInput(number);
     }
     var multiplicationFunction= function(action){
       action = '*';
-      return action;
+      return writeToInput(action);
     }
     var divisionFunction= function(action){
       action = '/';
-      return action;
+      return writeToInput(action);
     }
     var minusFunction= function(action){
       action = '-';
-      return action;
+      return writeToInput(action);
     }
     var plusFunction= function(action){
       action = '+';
-      return action;
+      return writeToInput(action);
     }
     var commaFunction= function(action){
       action = '.';
-      return action;
+      return writeToInput(action);
     }
     var commaFunction= function(action){
       action = '.';
-      return action;
+      return writeToInput(action);
     }
     var equalFunction= function(action){
-      action = '=';
-      return action;
+      var field = document.getElementById("windCal");
+      field.value = eval(field.value);
     }
-    function Calculator(a, operation, b){
-      var a=[];
-      var b=[];
-      var operation = 9;
-          }
-    
+    function cancelCal(){
+      var field = document.getElementById("windCal");
+      field.value = "";
+    }
+
+    //field.value.split(" ");
  </script>
 </body>
 </html>
