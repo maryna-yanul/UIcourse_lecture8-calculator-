@@ -10,7 +10,7 @@
 <div class="allCal">
 	<div class="block orange" onclick="cancelCal()">C</div>
   <div class="block orange" onclick="divisionFunction()">/</div>
-	<div class="value Cal"><input id="windCal" type="text" value=""></div>
+	<div class="value Cal"><input id="windCal" type="text" value="" readonly="readonly"></div>
 </div>
 <div class="allCal">
   <div class="block blockNumber" id="typeCal" onclick="number7Function()">7</div>
@@ -38,12 +38,6 @@
  <script type="text/javascript">
     //field.value.split(" ");
     //console.log(eval(field.value));
-
-    function writeToInput(char){
-      var field = document.getElementById("windCal");
-      field.value = field.value + char;
-    }
-
     var number7Function = function(number){
       number = 7;
       return writeToInput(number);
@@ -85,32 +79,35 @@
       return writeToInput(number);
     }
     var multiplicationFunction= function(action){
-      action = '*';
+      action = ' * ';
       return writeToInput(action);
     }
     var divisionFunction= function(action){
-      action = '/';
+      action = ' / ';
       return writeToInput(action);
     }
     var minusFunction= function(action){
-      action = '-';
+      action = ' - ';
       return writeToInput(action);
     }
     var plusFunction= function(action){
-      action = '+';
+      action = ' + ';
       return writeToInput(action);
     }
     var commaFunction= function(action){
       action = '.';
       return writeToInput(action);
     }
-    var commaFunction= function(action){
-      action = '.';
-      return writeToInput(action);
+     function writeToInput(char){
+      var field = document.getElementById("windCal");
+      field.value = field.value + char;
     }
     var equalFunction= function(action){
       var field = document.getElementById("windCal");
-      field.value = eval(field.value);
+        try{field.value = eval(field.value);
+        }catch(e){
+          field.value = "";
+        }
     }
     function cancelCal(){
       var field = document.getElementById("windCal");
